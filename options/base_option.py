@@ -33,7 +33,7 @@ class BaseOptions():
         if not self.initialized:
             self.initialize()
 
-        self.opt = self.parser.parse_args()
+        self.opt, _ = self.parser.parse_known_args()
 
         self.opt.is_train = self.is_train
 
